@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="google_translate_element" style="opacity: 0;position: absolute;z-index: -1;"></div> <!-- the goggle element -->
+    <header>
+        <h1>Transaltor</h1>
+        <select name="translator" id="translatorEl" class="notranslate"> <!-- notranslate(makes our select not to be affected by the goggle translator)  -->
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="zh-CN">Chinese</option>
+            <option value="hi">Hindi</option>
+            <option value="fr">French</option>
+            <option value="ig">Igbo</option>
+        </select>
+    </header>
+    <p>
+        This fudgy, old-fashioned chocolate pudding cake is baked with two delicious layers: a chocolate cake and a
+        gooey pudding-like sauce. If you love the flavor and texture of a good old chocolate pudding, then you’re going
+        to love this cake!
+    </p>
+    <p>I’ve been invited to a few birthdays lately, which means I had quite a few cakes to make. I took one of my mom’s
+        old recipe notebooks and leafed through the pages to try and find some of our family’s all-time favorite sweets.
+        Almost every recipe consisted of notes added over the years, each in a different pen color. I then came across
+        this pudding cake that I loved as a kid. There were no notes for this recipe, and I like to believe that’s
+        because it’s perfect.
+    </p>
+    <p>
+        As an Amazon Associate, I earn from qualifying purchases. I endorse products that I love and use daily.
+    </p>
+    <p>Pudding cakes offer two treats in one and consist of two layers – a comforting, gooey chocolate cake and a thick
+        chocolaty sauce that tastes just like an old-fashioned chocolate pudding. This cake goes by many names:
+        chocolate upside down cake, hot fudge pudding cake, brownie pudding cake, or self-saucing pudding cake.
+    </p>
+    <p>
+        The process of making chocolate pudding cake is a bit different than other desserts, but I promise you’ll have
+        amazing results.
+
+        The first layer is the cake batter and the second layer consists of a “dry” mixture of cocoa and sugar. We then
+        pour hot water evenly on top and while baking (I know, it feels so wrong, but it’s what makes this cake so
+        good), the water sinks to the bottom and creates a chocolate sauce. The cake then rises to the top creating this
+        deliciously warm and gooey chocolate pudding cake.
+    </p>
+</body>
+<script>
+    function googleTranslateElementInit() { //makes the new function
+      if (window.google && window.google.translate) { //check's if it has loaded
+        new window.google.translate.TranslateElement( //creats a new object
+          {
+            pageLanguage: 'en', //default language
+            layout: window.google.translate.TranslateElement.FloatPosition.TOP_LEFT, //position
+            autoDisplay: false, //display
+          },
+          'google_translate_element' //the target element
+        );
+      }
+    }
+
+    if (window.google && window.google.translate) { //check's if it has loaded
+      googleTranslateElementInit(); //calls the function
+    }
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="main.js"></script>
+</html>
